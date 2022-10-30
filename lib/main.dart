@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 
 import 'consts/theme_data.dart';
 import 'controllers/MenuController.dart';
+import 'inner_screens/add_prod.dart';
 import 'providers/dark_theme_provider.dart';
 
 void main() {
@@ -47,11 +48,14 @@ class _MyAppState extends State<MyApp> {
       child: Consumer<DarkThemeProvider>(
         builder: (context, themeProvider, child) {
           return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            title: 'Grocery',
-            theme: Styles.themeData(themeProvider.getDarkTheme, context),
-            home: const MainScreen(),
-          );
+              debugShowCheckedModeBanner: false,
+              title: 'Grocery',
+              theme: Styles.themeData(themeProvider.getDarkTheme, context),
+              home: const MainScreen(),
+              routes: {
+                UploadProductForm.routeName: (context) =>
+                    const UploadProductForm(),
+              });
         },
       ),
     );
