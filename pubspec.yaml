@@ -41,6 +41,12 @@ dependencies:
   iconly: ^1.0.1
   dotted_border: ^2.0.0+3
   image_picker: ^0.8.6
+  uuid: ^3.0.6
+  fluttertoast: ^8.1.1
+  #firebase core
+  firebase_core: ^2.1.1
+  cloud_firestore: ^4.0.3
+  firebase_storage: ^11.0.3
 
 dev_dependencies:
   flutter_test:
